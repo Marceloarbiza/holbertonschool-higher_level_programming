@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 from datetime import datetime
-print('and that piece of art is useful - Dora Korpar, {:%Y-%m-%d}' .format(datetime(2015, 10, 19)))
+import sys
+sys.stderr.write('and that piece of art is useful - Dora Korpar, {:%Y-%m-%d}\n' .format(datetime(2015, 10, 19)))
+sys.exit(1)
