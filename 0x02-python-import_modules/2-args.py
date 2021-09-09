@@ -6,7 +6,10 @@ if __name__ == "__main__":
     i = 1
     if len == 0:
         print("{} argument.".format(len))
-    elif len > 0:
+    elif len == 1:
+        print("{} argument:".format(len))
+        print("{}: {}".format(i, sys.argv[1]))
+    else:
         print("{} argument:".format(len))
         while i <= len:
             print("{}: {}".format(i, sys.argv[i]))
