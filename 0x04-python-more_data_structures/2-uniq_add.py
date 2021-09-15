@@ -1,6 +1,9 @@
 #!/usr/bin/puthon3
 def uniq_add(my_list=[]):
     new_list = []
-    new_list = set(my_list) 
+    res = 0
+    for i in my_list:
+        if i not in new_list:
+            new_list.append(i)
     res = sum(new_list)
     return res
