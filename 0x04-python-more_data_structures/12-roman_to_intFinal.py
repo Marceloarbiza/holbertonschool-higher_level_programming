@@ -29,7 +29,7 @@ def roman_to_int(roman_string):
             tmp_list.reverse()
             res2 = tmp_list[0]
             for h in range(1, len(tmp_list)):
-                res2 - tmp_list[1]
+                res2 -= tmp_list[h]
 
             res = prim + res2
         else:
