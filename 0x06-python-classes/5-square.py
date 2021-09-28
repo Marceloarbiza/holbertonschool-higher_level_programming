@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Doc"""
+
+
 class Square:
+    """Print, property and setter"""
+
     def __init__(self, size=0):
         self.__size = size
 
