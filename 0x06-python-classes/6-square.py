@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Doc"""
+
+
 class Square:
+    """Define new atribute Position"""
+
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
