@@ -39,6 +39,30 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 - List type rows:
+>>> matrix = ["School", [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+- List type rows:
+>>> matrix = [(1, 2, 3), [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+- List type rows:
+>>> matrix = [1, [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+- List type rows:
+>>> matrix = ["School", [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+- List type rows:
 >>> matrix = [{‘nombre’ : 'nestor', ‘apellido’ : 'Plasencia', ‘edad’ : 22}, [4, 5, 6]]
 >>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
