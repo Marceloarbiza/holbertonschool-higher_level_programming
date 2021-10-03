@@ -1,7 +1,20 @@
 #!/usr/bin/python3
+"""
+    Divide all elements of a matrix by div (integer or floa)
+"""
+
 
 def matrix_divided(matrix, div):
+    """
+    Divide the numbers of a matrix by a div number.
 
+    The lists in the matrix must be the same size, an all must\
+contain numbers (integer or float).
+
+    The div number must be integer or float too.
+
+    The function mus return a new list with the divided numbers.
+    """
     if isinstance(matrix, list) is False:
         raise TypeError("matrix must be a matrix \
 (list of lists) of integers/floats")
