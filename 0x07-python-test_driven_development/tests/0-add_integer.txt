@@ -2,7 +2,9 @@ import unittest
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-class TestAddInteger(unittest.TestCase):
-    def test_add(self):
-        self.assertAlmostEqual(add_integer(100.3, -2), 98)
-        self.assertAlmostEqual(add_integer(100.3, 2.9), 103)
+>>> add_integer(100.3, 2.8)
+102
+
+>>> add_integer(100.3, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
