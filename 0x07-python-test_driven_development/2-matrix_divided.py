@@ -4,26 +4,26 @@ def matrix_divided(matrix, div):
 
     if isinstance(matrix, list) is False:
         raise TypeError("matrix must be a matrix \
-                (list of lists) of integers/floats")
+(list of lists) of integers/floats")
 
     if len(matrix) == 0:
         raise TypeError("matrix must be a matrix \
-                (list of lists) of integers/floats")
+(list of lists) of integers/floats")
 
     for x in matrix:
         if len(x) == 0:
             raise TypeError("matrix must be a matrix \
-                    (list of lists) of integers/floats")
+(list of lists) of integers/floats")
 
     for m in matrix:
         if isinstance(m, list) is False:
             raise TypeError("matrix must be a matrix \
-                    (list of lists) of integers/floats")
+(list of lists) of integers/floats")
         else:
             for i in m:
                 if type(i) not in [int, float]:
                     raise TypeError("matrix must be a matrix \
-                            (list of lists) of integers/floats")
+(list of lists) of integers/floats")
 
     len0 = len(matrix[0])
     for le in matrix:
