@@ -66,12 +66,6 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-- List type rows:
->>> matrix = [{‘nombre’ : 'nestor', ‘apellido’ : 'Plasencia', ‘edad’ : 22}, [4, 5, 6]]
->>> matrix_divided(matrix, 3)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
 - List element integer or float:
 >>> matrix = [[1, 2, '3'], [4, 5, 6]]
 >>> matrix_divided(matrix, 3)
@@ -117,10 +111,6 @@ TypeError: div must be a number
 >>> matrix_divided(matrixD)
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
-
->>> matrix_divided(matrixD, float('nan'))
-Traceback (most recent call last):
-TypeError: div must be a number
 
 >>> matrix_divided(matrixD, "School")
 Traceback (most recent call last):
