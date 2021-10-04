@@ -6,7 +6,7 @@
 
 class Rectangle:
     """
-        Define area and perimeter
+        Define __str__
     """
     def __init__(self, width=0, height=0):
         self.__width = width
@@ -54,3 +54,14 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        cadena = ""
+        if self.__width == 0 or self.__height == 0:
+            return cadena
+        else:
+            for h in range(self.__height):
+                for w in range(self.__width):
+                    cadena += '#'
+                cadena += '\n'
+        return cadena[0:-1]
