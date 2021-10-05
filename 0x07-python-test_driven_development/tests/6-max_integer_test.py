@@ -1,12 +1,8 @@
 #!/usr/bin/python3
+"""Unittest for max_integer([..])
 """
-    Testing max_integer([]) with unittest
-"""
-
-
 import unittest
 max_integer = __import__('6-max_integer').max_integer
-
 
 class TestMaxInteger(unittest.TestCase):
     """ Test the base case
@@ -23,3 +19,16 @@ class TestMaxInteger(unittest.TestCase):
     """
     def empty_list(self):
         self.assertEqual(max_integer([]), None)
+
+    """ Test positive and negative numbers
+    """
+    def pos_neg(self):
+        self.assertEqual(max_integer([2, -3, 1, -4]), 2)
+
+    """ Test char letters
+    """
+    def char_letters(self):
+        self.assertEqual(max_integer(['b', 'a', 'f', 'c']), 'f')
+
+if __name__ == '__main__':
+    unittest.main()
