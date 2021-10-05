@@ -4,6 +4,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """ Test the base case
     """
@@ -34,7 +35,7 @@ class TestMaxInteger(unittest.TestCase):
     """
     def char_letters(self):
         self.assertEqual(max_integer(['b', 'a', 'f', 'c']), 'f')
-    
+
     """ Test char int
     """
     def char_int(self):
