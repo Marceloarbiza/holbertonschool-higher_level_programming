@@ -15,10 +15,15 @@ class TestMaxInteger(unittest.TestCase):
     def same_number(self):
         self.assertEqual(max_integer([4, 4, 4, 4]), 4)
 
-    """ Test the same number
+    """ Test empty list
     """
     def empty_list(self):
         self.assertEqual(max_integer([]), None)
+
+    """ Test None list
+    """
+    def none_list(self):
+        self.assertEqual(max_integer([None]), None)
 
     """ Test positive and negative numbers
     """
@@ -29,6 +34,13 @@ class TestMaxInteger(unittest.TestCase):
     """
     def char_letters(self):
         self.assertEqual(max_integer(['b', 'a', 'f', 'c']), 'f')
+    
+    """ Test char int
+    """
+    def char_int(self):
+        self.assertRaises(TypeError, max_integer, [2, 'f', 5, 'r'])
 
-if __name__ == '__main__':
-    unittest.main()
+    """ Test string in list
+    """
+    def char_string(self):
+        self.assertRaises(TypeError, max_integer, [2, "dog", 5, "cat"])
