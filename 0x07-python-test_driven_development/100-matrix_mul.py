@@ -50,11 +50,11 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
     mAC = []
-    for i in range(0, len(m_a)):
+    for i in range(len(m_a)):
         temp = []
-        for j in range(0, len(m_b[0])):
+        for j in range(len(m_b[0])):
             res = 0
-            for k in range(0, len(m_a[0])):
+            for k in range(len(m_a[0])):
                 res += m_a[i][k] * m_b[k][j]
             temp.append(res)
         mAC.append(temp)
