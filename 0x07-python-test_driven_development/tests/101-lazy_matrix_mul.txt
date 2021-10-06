@@ -22,6 +22,9 @@ array([[13, 16]])
 Traceback (most recent call last):
 ValueError: shapes (1,0) and (1,0) not aligned: 0 (dim 1) != 1 (dim 0)
 
+>>> lazy_matrix_mul([], [])
+False
+
 >>> lazy_matrix_mul()
 Traceback (most recent call last):
 TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
