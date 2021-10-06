@@ -40,15 +40,23 @@ def matrix_mul(m_a, m_b):
     for a in m_a:
         if len(a) != lena:
             raise TypeError("each row of m_a must be of the same size")
-        lena = len(a)
 
     lenb = len(m_b[0])
     for b in m_b:
         if len(b) != lenb:
             raise TypeError("each row of m_b must be of the same size")
-        lenb = len(b)
 
-    if lena != lenb:
+    if lena != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
-    
 
+    mAC = []
+    for i in range(0, len(m_a)):
+        temp = []
+        for j in range(0, len(m_b[0])):
+            res = 0
+            for k in range(0, len(m_a[0])):
+                res += m_a[i][k] * m_b[k][j]
+            temp.append(res)
+        mAC.append(temp)
+
+    return mAC
