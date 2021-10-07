@@ -16,7 +16,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
-    def test_basic_case(self):
+    def test_secbasic_case(self):
         """ Test the base case
         """
         self.assertEqual(max_integer([1, 2, 8, 4]), 8)
