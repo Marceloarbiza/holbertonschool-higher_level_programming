@@ -33,3 +33,8 @@ Test cases:
 >>> my_list.append(-4)
 >>> my_list.print_sorted()
 [-4, 1, 3, 3, 5, inf]
+
+
+>>> my_list.append(111111111111111111111111)
+>>> my_list.print_sorted()
+[-4, 1, 3, 3, 5, 111111111111111111111111, inf]
