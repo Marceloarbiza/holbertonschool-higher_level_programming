@@ -13,20 +13,6 @@ test 1:
 >>> print(len(bg) > 0)
 True
 
-test 2:
-
->>> bg = __import__('7-base_geometry').BaseGeometry.area.__doc__
->>> print(len(bg) > 0)
-Traceback (most recent call last):
-TypeError: object of type 'NoneType' has no len()
-
-test 3:
-
->>> bg = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
->>> print(len(bg) > 0)
-Traceback (most recent call last):
-TypeError: object of type 'NoneType' has no len()
-
 >>> bg = BaseGeometry()
 
 >>> bg.integer_validator("positive", 3)
