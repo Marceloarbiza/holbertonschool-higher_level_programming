@@ -64,3 +64,11 @@ TypeError: float must be an integer
 >>> bg.integer_validator("tuple", (1, 2))
 Traceback (most recent call last):
 TypeError: tuple must be an integer
+
+>>> bg.integer_validator("list", [1, 2])
+Traceback (most recent call last):
+TypeError: list must be an integer
+
+>>> bg.integer_validator("array", {1, 2})
+Traceback (most recent call last):
+TypeError: array must be an integer
