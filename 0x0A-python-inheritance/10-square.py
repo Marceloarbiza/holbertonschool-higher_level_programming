@@ -3,25 +3,8 @@
 """
 
 
-""" Import class BaseGeometry """
-BaseGeometry = __import__('9-rectangle').BaseGeometry
-
-
-class Rectangle(BaseGeometry):
-    """ Class Rectangle heridate from BaseGeometry """
-    def __init__(self, width, height):
-
-        self.__width = width
-        self.integer_validator("width", width)
-        self.__height = height
-        self.integer_validator("height", height)
-
-    """ the area for Rectangle """
-    def area(self):
-        return self.__width * self.__height
-
-    def __str__(self):
-        return ("[Rectangle] {:d}/{:d}".format(self.__width, self.__height))
+""" Import class Rectangle """
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
