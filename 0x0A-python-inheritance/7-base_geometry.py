@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" Write a class BaseGeometry (based on 6-base_geometry.py).
+"""
+===============================
+Module class 7-base_geometry.py
+===============================
 """
 
 
 class BaseGeometry:
-    """ functions """
+    """ functions of BaseGeometry """
+
     def area(self):
         raise Exception("area() is not implemented")
 
