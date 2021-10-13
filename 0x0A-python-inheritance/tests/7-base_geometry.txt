@@ -72,3 +72,11 @@ TypeError: list must be an integer
 >>> bg.integer_validator("array", {1, 2})
 Traceback (most recent call last):
 TypeError: array must be an integer
+
+>>> bg.integer_validator("alone")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator(12)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
