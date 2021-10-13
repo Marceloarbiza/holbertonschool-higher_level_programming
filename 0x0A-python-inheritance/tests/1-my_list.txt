@@ -41,7 +41,7 @@ Traceback (most recent call last):
 TypeError: '<' not supported between instances of 'NoneType' and 'int'
 
 
->>> my_list.append('a')
+>>> my_list.append(float('Nan'))
 >>> my_list.print_sorted()
 Traceback (most recent call last):
 TypeError: '<' not supported between instances of 'NoneType' and 'int'
