@@ -23,3 +23,18 @@ TypeError: char must be an integer
 Traceback (most recent call last):
 TypeError: inf must be an integer
 
+>>> bg.integer_validator("none", None)
+Traceback (most recent call last):
+TypeError: none must be an integer
+
+>>> bg.integer_validator("none2", )
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator(, 12)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
