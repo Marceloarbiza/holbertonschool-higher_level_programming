@@ -48,3 +48,19 @@ TypeError: nan must be an integer
 >>> bg.integer_validator("str", "dog")
 Traceback (most recent call last):
 TypeError: str must be an integer
+
+>>> bg.integer_validator("tripple", 12, 13)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> bg.integer_validator("float", 1.2)
+Traceback (most recent call last):
+TypeError: float must be an integer
+
+>>> bg.integer_validator("tuple", (1, 2))
+Traceback (most recent call last):
+TypeError: tuple must be an integer
