@@ -7,6 +7,26 @@ test 7-base_geometry.py
 test cases:
 -----------
 
+test 1:
+
+>>> bg = __import__('7-base_geometry').__doc__
+>>> print(len(bg) > 0)
+True
+
+test 2:
+
+>>> bg = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> print(len(bg) > 0)
+Traceback (most recent call last):
+TypeError: object of type 'NoneType' has no len()
+
+test 3:
+
+>>> bg = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> print(len(bg) > 0)
+Traceback (most recent call last):
+TypeError: object of type 'NoneType' has no len()
+
 >>> bg = BaseGeometry()
 
 >>> bg.integer_validator("positive", 3)
@@ -92,3 +112,4 @@ TypeError: num must be an integer
 >>> bg.integer_validator("empL", [])
 Traceback (most recent call last):
 TypeError: empL must be an integer
+
