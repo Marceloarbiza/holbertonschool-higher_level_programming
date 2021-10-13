@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" Write a class BaseGeometry (based on 6-base_geometry.py).
+"""
+==============================================
+Module class def __init__(self, width, height)
+==============================================
 """
 
 
 class BaseGeometry:
-    """ functions """
+    """ definition of functions """
+
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -15,11 +19,13 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """ Class Rectangle heridate from BaseGeometry """
+
     def __init__(self, width, height):
-        
-            self.__width = width
-            self.integer_validator("width", width)
-            self.__height = height
-            self.integer_validator("height", height)
+
+        self.__width = width
+        self.integer_validator("width", width)
+        self.__height = height
+        self.integer_validator("height", height)
