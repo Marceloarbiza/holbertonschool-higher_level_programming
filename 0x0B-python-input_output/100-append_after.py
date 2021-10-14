@@ -8,6 +8,8 @@ after each line containing a specific string (see example):
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """ write an specific line """
+
     with open(filename, 'r') as re:
         for line in re:
             if search_string in re:
