@@ -13,9 +13,9 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 try:
-    my_list = load_from_json_file("add_item.json")
+    list_ = load_from_json_file("add_item.json")
 except:
-    my_list = []
+    list_ = []
 for a in range(1, len(argv)):
-    my_list.append(argv[a])
-save_to_json_file(my_list, "add_item.json")
+    list_.append(argv[a])
+save_to_json_file(list_, "add_item.json")
