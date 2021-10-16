@@ -90,6 +90,28 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
-        """ are of the rectangle """
+        """ area of the rectangle """
 
-        return self.width * self.height
+        return self.__width * self.__height
+
+    def display(self):
+        """ display prints in stdout the Rectangle """
+
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print('#', end="")
+            print()
+
+    def __str__(self):
+        """ returns [Rectangle] (<id>) <x>/<y> - <width>/<height> """
+
+        strRet = ""
+        if self.__width == 0 or self.__height == 0:
+            return strRet
+        else:
+            return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
