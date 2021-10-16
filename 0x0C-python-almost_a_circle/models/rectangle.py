@@ -136,14 +136,14 @@ class Rectangle(Base):
                 if a == 4:
                     self.__y = args[a]
         else:
-             for key,value in kwargs.items():
-                 if key == "id":
+            for key, value in kwargs.items():
+                if key == "id":
                     self.id = value
-                 if key == "width":
+                if key == "width":
                     self.__width = value
-                 if key == "height":
+                if key == "height":
                     self.__height = value
-                 if key == "x":
+                if key == "x":
                     self.__x = value
-                 if key == "y":
+                if key == "y":
                     self.__y = value
