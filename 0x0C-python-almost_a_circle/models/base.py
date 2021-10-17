@@ -45,6 +45,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """ returns the list of the JSON string representation json_string """
+
         if json_string is None or not json_string:
             return []
         else:
@@ -67,3 +68,27 @@ class Base:
         dummy.update(**dictionary)
 
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+            returns a list of instances
+            First: Verify if the file exists
+            Second: Create the list of dics with the func:
+            from_json_string(json_string)
+            Third: I go through the list creating the
+            instances with the func: create(cls, **dictionary)
+        """
+        from os import path
+
+        filename = cls.__name__ + '.json'
+
+        list_json = []
+
+        if path.exists(filename):
+            with open(filename, 'r') as f:
+                list_json = [
+                    cls.create(**ins) for ins in cls.from_json_string(f.read())
+                    ]
+
+        return list_json
