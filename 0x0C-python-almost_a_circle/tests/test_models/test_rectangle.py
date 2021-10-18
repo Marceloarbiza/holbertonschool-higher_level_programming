@@ -90,6 +90,8 @@ class TestCaseRectangle(unittest.TestCase):
         self.assertFalse(r5 is r6)
         self.assertFalse(r5 == r6)
 
+        self.assertTrue(issubclass(Rectangle, Base))
+
     def test_type(self):
         """ validate the types """
 
