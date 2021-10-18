@@ -15,6 +15,14 @@ class TestCaseRectangle(unittest.TestCase):
     def test_args(self):
         """ test different type of args """
 
+        r_1 = Rectangle(10, 2)
+        r_2 = Rectangle(2, 10)
+        r_3 = Rectangle(10, 2, 0, 0, 12)
+
+        self.assertEqual(r_1.id, 1)
+        self.assertEqual(r_2.id, 2)
+        self.assertEqual(r_3.id, 12)
+
         r1 = Rectangle(4, 6, 2, 1, 12)
 
         self.assertEqual(r1.id, 12)
@@ -25,7 +33,7 @@ class TestCaseRectangle(unittest.TestCase):
 
         r2 = Rectangle(5, 7)
 
-        self.assertEqual(r2.id, 1)
+        self.assertEqual(r2.id, 3)
         self.assertEqual(r2.width, 5)
         self.assertEqual(r2.height, 7)
         self.assertEqual(r2.x, 0)
@@ -101,3 +109,15 @@ class TestCaseRectangle(unittest.TestCase):
 
         self.assertEqual(type(dictionary), dict)
         self.assertEqual(type(json_dictionary), str)
+
+    def test_area(self):
+        """ verify areas results """
+
+        r_4 = Rectangle(3, 2, 0, 0, 23)
+        self.assertEqual(r_4.area(), 6)
+
+        r_5 = Rectangle(2, 10, 0, 0, 23)
+        self.assertEqual(r_5.area(), 20)
+
+        r_6 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r_6.area(), 56)
