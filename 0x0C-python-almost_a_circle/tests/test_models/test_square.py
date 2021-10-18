@@ -11,7 +11,7 @@ from models.base import Base
 import unittest
 
 
-class TestCaseRectangle(unittest.TestCase):
+class TestCaseSquare(unittest.TestCase):
 
     def test_args(self):
         """ test different type of args """
