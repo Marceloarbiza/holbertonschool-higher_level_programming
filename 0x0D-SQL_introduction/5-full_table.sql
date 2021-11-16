@@ -1,3 +1,3 @@
 -- 3 first students in the Batch ID=3
 -- because Batch 3 is the best
-SHOW FULL COLUMNS FROM first_table;
+SHOW CREATE TABLE first_table;
