@@ -2,7 +2,7 @@
 
 const args = process.argv;
 
-if (args[2] == null || parseInt(args[2]) === 1) {
+if (args[2] == null || parseInt(args.length) < 3) {
   console.log(0);
 } else {
   args.splice(0, 2);
