@@ -2,7 +2,7 @@
 
 const args = process.argv;
 
-if (args.length === 2) {
+if (args[2] == null) {
   console.log('No argument');
 } else {
   for (let i = 2; i < args.length; i++) {
