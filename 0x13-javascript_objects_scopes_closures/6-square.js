@@ -10,7 +10,7 @@ module.exports = class Square extends Sq {
         if (c == null) {
           s += 'X' + '';
         } else {
-          s += 'C' + '';
+          s += c + '';
         }
       }
       console.log(s);
