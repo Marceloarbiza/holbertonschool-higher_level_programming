@@ -4,11 +4,13 @@ const data = require('./101-data');
 
 const dictD = data.dict;
 
-let newDict = {};
+const newDict = {};
 
-for (let item in dictD){
-	/*console.log('key:' + item + ' value:' + dictD[item]);*/
-	newDict[dictD[item]] = item;
+for (const key in dictD) {
+  if (!newDict[dictD[key]]) {
+    newDict[dictD[key]] = [key];
+  } else {
+    newDict[dictD[key]].push(key);
+  }
 }
-console.log(dictD);
 console.log(newDict);
