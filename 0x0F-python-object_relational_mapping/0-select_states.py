@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+""" Write a script that lists all states from the database hbtn_0e_0_usa """
 
 
 if __name__ == "__main__":
     import MySQLdb
     import sys
+
     args = sys.argv
     database_connection = MySQLdb.connect(
             host='localhost',
