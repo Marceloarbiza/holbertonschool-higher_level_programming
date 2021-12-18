@@ -18,5 +18,5 @@ if __name__ == "__main__":
     dele = session.query(State).filter(State.name.contains('a'))
     for d in dele:
         session.delete(d)
-        session.commit()
+    session.commit()
     session.close()
