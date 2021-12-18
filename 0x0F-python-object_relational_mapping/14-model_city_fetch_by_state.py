@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Start link class to table in database
 """
-
-
 if __name__ == "__main__":
 
     import sys
@@ -20,6 +18,6 @@ if __name__ == "__main__":
     session = Session()
     tot = session.query(State, City).filter(City.state_id == State.id)\
                  .order_by(City.id).all()
-    for st, ci in tot:
-        print(f'{st.name}: ({ci.id}) {ci.name}')
+    for t in tot:
+        print(f'{t.State.name}: ({t.City.id}) {t.City.name}')
     session.close()
