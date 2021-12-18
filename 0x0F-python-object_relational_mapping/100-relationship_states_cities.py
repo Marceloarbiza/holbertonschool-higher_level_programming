@@ -19,5 +19,6 @@ if __name__ == "__main__":
     state_parent = State(name='California')
     city_child = City(name='San Francisco')
     state_parent.cities.append(city_child)
+    session.add(state_parent)
     session.commit()
     session.close()
