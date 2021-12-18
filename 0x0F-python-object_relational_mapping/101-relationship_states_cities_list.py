@@ -20,5 +20,5 @@ if __name__ == "__main__":
     for s in states_data:
         print(f'{s.id}: {s.name}')
         for c in s.cities:
-            print('\t'+f'{c.id}: c.name')
+            print('\t'+f'{c.id}: {c.name}')
     session.close()
