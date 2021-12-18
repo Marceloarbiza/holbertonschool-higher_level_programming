@@ -17,8 +17,6 @@ if __name__ == "__main__":
     session = Session()
     session.add(State(name='Louisiana'))
     session.commit()
-    states = session.query(State).order_by(State.id).all()
-
-    for st in states:
-        print(f'{st.id}: {st.name}')
+    states = session.query(State).filter(State.name == 'Louisiana').first()
+    print(f'{states.id}')
     session.close()
