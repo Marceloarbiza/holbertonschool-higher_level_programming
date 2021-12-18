@@ -20,6 +20,6 @@ if __name__ == "__main__":
     session = Session()
     tot = session.query(City, State).filter(City.state_id == State.id)\
                  .order_by(City.id).all()
-    for t in tot:
-        print(f'{t.State.name}: ({t.City.id}) {t.City.name}')
+    for st, ci in tot:
+        print(f'{st.name}: ({ci.id}) {ci.name}')
     session.close()
