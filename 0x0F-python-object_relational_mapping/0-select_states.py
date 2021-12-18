@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import MySQLdb
-import sys
 
 if __name__ == "__main__":
+    import MySQLdb
+    import sys
     args = sys.argv
     database_connection = MySQLdb.connect(
             host='localhost',
