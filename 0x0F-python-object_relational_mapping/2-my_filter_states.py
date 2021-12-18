@@ -11,7 +11,7 @@ if __name__ == "__main__":
                                                user=args[1], passwd=args[2],
                                                db=args[3])
     cur = database_connection.cursor()
-    cur.execute("SELECT * FROM states WHERE states.name= '{}'\
+    cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY '{}'\
                 ORDER BY states.id".format(args[4]))
     for row in cur.fetchall():
         print(row)
