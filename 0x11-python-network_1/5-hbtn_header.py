@@ -10,6 +10,6 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     obj = 'X-Request-Id'
-    r = requests.get(url, auth=('user', 'pass'))
+    r = requests.get(url)
     value = r.headers[obj]
     print(value)
