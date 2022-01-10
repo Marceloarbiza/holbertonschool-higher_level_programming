@@ -2,13 +2,13 @@
 """
 Write a Python script that takes in a URL, sends a request to the URL
 """
-from urllib.request import urlopen
+import urllib.request
 import sys
 
 
 if __name__ == "__main__":
     url = "https://intranet.hbtn.io/status"
-    with urlopen(url) as req:
+    with urllib.request.urlopen(url) as req:
         r = req.read()
         print("Body response:")
         print("\t- type: {}".format(type(r)))
