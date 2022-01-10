@@ -6,7 +6,8 @@ import urllib.request
 import sys
 
 
-if __name__ == "__main__":
+def fetcher():
+    """ fetch """    
     url = "https://intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as req:
         r = req.read()
@@ -14,3 +15,6 @@ if __name__ == "__main__":
         print("\t- type: {}".format(type(r)))
         print("\t- content: {}".format(r))
         print("\t- utf8 content: {}".format(r.decode('utf8')))
+
+if __name__ == "__main__":
+    fetcher()
