@@ -4,17 +4,15 @@ Write a Python script that takes in a URL, sends a request to the URL
 """
 
 import requests
-from requests import get
+from requests import post
 import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    req = get(url)
     datax = {}
-    if sys.argv[1] is None:
-        datax['q'] = ""
-    else:
-        datax['q'] = letter
+    args = sys.argv
+    if len(args) > 1:
+        datax['q'] = args[1]
     res = post(url, data=datax)
 
     try:
