@@ -10,4 +10,4 @@ from requests import post
 if __name__ == "__main__":
     url = sys.argv[1]
     value = post(url, data={'email': sys.argv[2]})
-    print(value)
+    print(value.text)
