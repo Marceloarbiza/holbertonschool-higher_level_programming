@@ -9,10 +9,9 @@ request(swUrl, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    let x = 0;
-    var dictO = {};
+    const dictO = {};
     const urlContent = JSON.parse(body);
-    while (urlContent[x]) {
+    for (const x in urlContent) {
       if (urlContent[x].completed === true) {
         if (dictO[urlContent[x].userId] == null) {
           dictO[urlContent[x].userId] = 1;
@@ -20,8 +19,7 @@ request(swUrl, function (error, response, body) {
           dictO[urlContent[x].userId]++;
         }
       }
-      x++;
     }
+    console.log(dictO);
   }
-  console.log(dictO);
 });
