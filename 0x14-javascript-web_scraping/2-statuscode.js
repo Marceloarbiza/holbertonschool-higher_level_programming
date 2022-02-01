@@ -5,23 +5,9 @@
 
 const url = process.argv.slice(2)[0];
 
-const urlLi = url.split('/');
-const pathUrl = '/' + urlLi[3];
-const hostUrl = urlLi[2];
+const request = require('request');
 
-const https = require('https');
-const options = {
-  hostname: hostUrl,
-  path: pathUrl,
-  method: 'GET'
-};
-
-const req = https.request(options, res => {
+request(url, (err, res) => {
+  if (err) { return console.log(err); }
   console.log(`code: ${res.statusCode}`);
 });
-
-req.on('error', error => {
-  console.error(error);
-});
-
-req.end();
